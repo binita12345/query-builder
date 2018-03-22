@@ -1,6 +1,5 @@
 <h2>Angular-UI-Query-Builder</h2>
-  
-      {{mySpec}}
+
       <legend>Query builder</legend>
       <ui-query-builder
         query="query"
@@ -10,16 +9,26 @@
       <legend>Generated query</legend>
       <pre>{{query | json}}</pre>
 
+      <button ng-click="export()"> Export </button>
 
-      <!-- <div class="pull-right">
-        <qb-export
-          query="query"
-          spec="spec"
-          url="/api/data/export"
-        ></qb-export>
-      </div>
-      <legend>Query builder + table</legend> -->
-
+      <table class="table table-bordered table-striped table-hover" qb-table="query" sticky-thead sticky-tfoot ng-if="data">
+        <thead>
+          <tr>
+            <th qb-col="status" sortable width="60px">Name</th>
+            <th qb-col="name" sortable>City</th>
+            <th qb-col="email" sortable>Email</th>
+            <th qb-col="address">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="row in data">
+            <td>{{row.name}}</td>
+            <td>{{row.city}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.age}}</td>
+          </tr>
+        </tbody>
+      </table>
      
 
       <!-- <table class="table table-bordered table-striped table-hover" qb-table="query" sticky-thead sticky-tfoot>

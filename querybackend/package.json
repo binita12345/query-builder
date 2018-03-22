@@ -1,0 +1,19 @@
+{
+   "name": "querybuilder",
+   "version": "0.0.1",
+   "description": "querybuilder app",
+   "dependencies": {
+      "async": "latest",
+      "body-parser": "latest",
+      "connect-flash": "latest",
+      "cors": "^2.8.4",
+      "ejs-locals": "latest",
+      "express": "latest",
+      "express-session": "latest",
+      "fs": "0.0.1-security",
+      "http": "http",
+      "moment": "latest",
+      "mongoose": "latest",
+      "path": "^0.12.7"
+   }
+}
